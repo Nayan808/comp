@@ -1,0 +1,90 @@
+.faq-header {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 6rem 0 3rem;
+    margin-top: 56px;
+    color: white;
+}
+
+.faq-section {
+    padding: 4rem 0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(109, 40, 217, 0.1);
+    color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(109, 40, 217, 0.25);
+}
+
+.accordion-item {
+    border: 1px solid rgba(109, 40, 217, 0.2);
+    margin-bottom: 1rem;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236d28d9'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faq-category {
+    background: rgba(109, 40, 217, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.faq-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+[data-bs-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .accordion-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="dark"] .faq-category {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.search-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.search-box input {
+    padding-left: 3rem;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-box .bi-search {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+.contact-support {
+    background: linear-gradient(to right, rgba(109, 40, 217, 0.1), rgba(249, 115, 22, 0.1));
+    padding: 3rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.contact-support h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+[data-bs-theme="dark"] .contact-support {
+    background: linear-gradient(to right, rgba(109, 40, 217, 0.2), rgba(249, 115, 22, 0.2));
+}

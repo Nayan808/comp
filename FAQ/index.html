@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TechMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-header {
+            background: var(--primary-color);
+            padding: 6rem 0 3rem;
+            margin-top: 56px;
+            color: white;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-box input {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        [data-bs-theme="dark"] .search-box input {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="/">TechMart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/FAQ">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="cartButton">
+                            Cart <span class="badge bg-primary">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-outline-primary rounded-circle p-2" id="darkModeToggle" aria-label="Toggle dark mode">
+                            <i class="bi bi-sun-fill" id="lightIcon"></i>
+                            <i class="bi bi-moon-fill d-none" id="darkIcon"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="#" class="btn btn-login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FAQ Header -->
+    <header class="faq-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Frequently Asked Questions</h1>
+            <p class="lead mb-5">Find answers to common questions about our products and services</p>
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" class="form-control form-control-lg" placeholder="Search FAQs..." id="faqSearch">
+            </div>
+        </div>
+    </header>
+
+    <!-- FAQ Content -->
+    <section class="faq-section">
+        <div class="container">
+            <!-- Orders & Shipping -->
+            <div class="faq-category">
+                <h3><i class="bi bi-box-seam me-2"></i>Orders & Shipping</h3>
+                <div class="accordion" id="accordionOrders">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                How long does shipping take?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionOrders">
+                            <div class="accordion-body">
+                                Standard shipping typically takes 3-5 business days within the continental US. Express shipping options are available for 1-2 business day delivery.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                How can I track my order?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionOrders">
+                            <div class="accordion-body">
+                                Once your order ships, you'll receive a tracking number via email. You can also track your order by logging into your account and viewing your order history.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Returns & Refunds -->
+            <div class="faq-category">
+                <h3><i class="bi bi-arrow-return-left me-2"></i>Returns & Refunds</h3>
+                <div class="accordion" id="accordionReturns">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                What is your return policy?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionReturns">
+                            <div class="accordion-body">
+                                We offer a 30-day return policy for most items. Products must be in original condition with all packaging and accessories included.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                How long do refunds take to process?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionReturns">
+                            <div class="accordion-body">
+                                Refunds typically process within 3-5 business days after we receive your return. The funds may take an additional 2-5 business days to appear in your account.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Support -->
+            <div class="faq-category">
+                <h3><i class="bi bi-gear me-2"></i>Technical Support</h3>
+                <div class="accordion" id="accordionTech">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                How do I reset my device?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionTech">
+                            <div class="accordion-body">
+                                Reset procedures vary by device. You can find specific instructions in your product manual or contact our support team for guidance.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                Where can I find product manuals?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionTech">
+                            <div class="accordion-body">
+                                Product manuals are available for download on each product's page. You can also find them in our support center under the "Documentation" section.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support -->
+    <section class="contact-support">
+        <div class="container">
+            <h3>Still have questions?</h3>
+            <p class="mb-4">Our support team is here to help you</p>
+            <button class="btn btn-primary btn-lg">Contact Support</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>TechMart</h5>
+                    <p>Your one-stop shop for all things tech</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/aboutus" class="footer-link">About Us</a></li>
+                        <li><a href="/blogs" class="footer-link">Blog</a></li>
+                        <li><a href="/FAQ" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Help & Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#shipping" class="footer-link">Shipping Info</a></li>
+                        <li><a href="#returns" class="footer-link">Returns Policy</a></li>
+                        <li><a href="#technical" class="footer-link">Technical Support</a></li>
+                        <li><a href="#contact" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>FAQ Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#orders" class="footer-link">Orders & Shipping</a></li>
+                        <li><a href="#payments" class="footer-link">Payment & Security</a></li>
+                        <li><a href="#products" class="footer-link">Product Information</a></li>
+                        <li><a href="#warranty" class="footer-link">Warranty & Repairs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 TechMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dark mode toggle
+            const html = document.documentElement;
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const lightIcon = document.getElementById('lightIcon');
+            const darkIcon = document.getElementById('darkIcon');
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                html.setAttribute('data-bs-theme', savedTheme);
+                updateIcons(savedTheme === 'dark');
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                const isDark = html.getAttribute('data-bs-theme') === 'dark';
+                const newTheme = isDark ? 'light' : 'dark';
+                
+                html.setAttribute('data-bs-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateIcons(!isDark);
+            });
+
+            function updateIcons(isDark) {
+                if (isDark) {
+                    lightIcon.classList.add('d-none');
+                    darkIcon.classList.remove('d-none');
+                } else {
+                    lightIcon.classList.remove('d-none');
+                    darkIcon.classList.add('d-none');
+                }
+            }
+
+            // FAQ Search functionality
+            const searchInput = document.getElementById('faqSearch');
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+
+                accordionItems.forEach(item => {
+                    const question = item.querySelector('.accordion-button').textContent.toLowerCase();
+                    const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
+
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
